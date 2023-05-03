@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+div,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+#banner-container {
+  margin: 0 auto;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  height: 150px;
+}
+
+div.numbers {
+  margin-top: 15px;
+  padding: 5px 10px;
+  width: 85px;
+}
+
+div.numbers>div {
+  margin-top: 5px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+div.numbers>div.text-right {
+  justify-content: flex-end;
+}
+
+div.numbers>div.between {
+  justify-content: space-between;
+}
+
+div.numbers>div.center {
+  justify-content: center;
+}
+
+div.numbers>div>span.ml-auto {
+  margin-left: auto;
+}
+
+@keyframes huero {
+  0% {
+    filter: hue-rotate(0deg);
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  25% {
+    filter: hue-rotate(90deg);
+    -webkit-filter: hue-rotate(90deg);
+  }
+
+  50% {
+    filter: hue-rotate(180deg);
+    -webkit-filter: hue-rotate(180deg);
+  }
+
+  75% {
+    filter: hue-rotate(270deg);
+    -webkit-filter: hue-rotate(270deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+
+@-webkit-keyframes huero {
+  0% {
+    filter: hue-rotate(0deg);
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  25% {
+    filter: hue-rotate(90deg);
+    -webkit-filter: hue-rotate(90deg);
+  }
+
+  50% {
+    filter: hue-rotate(180deg);
+    -webkit-filter: hue-rotate(180deg);
+  }
+
+  75% {
+    filter: hue-rotate(270deg);
+    -webkit-filter: hue-rotate(270deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+
+div.numbers span {
+  margin-right: 5px;
+  flex-shrink: 1;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  color: transparent;
+  background-image: linear-gradient(135deg, rgba(47, 214, 255, .7), rgba(242, 39, 242, .8), rgba(47, 214, 255, .7));
+  background-image: -webkit-linear-gradient(135deg, rgba(47, 214, 255, .7), rgba(242, 39, 242, .8), rgba(47, 214, 255, .7));
+  background-attachment: fixed;
+  background-size: 800px 180px;
+  background-position: top;
+  animation: huero 8s linear 10s infinite;
+  -webkit-animation: huero 8s linear 10s infinite;
+}
+
+@media (max-width: 576px) {
+  div.numbers span {
+    width: 16px;
+    height: 16px;
+    background-size: 580px 100px;
+  }
+}
+
+#last {
+  margin: 30px auto;
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(rgba(200, 230, 200, .7), rgba(0, 0, 200, 0.3));
+  background-attachment: fixed;
+  background-size: 600px 600px;
+  border-radius: 10px;
+}
